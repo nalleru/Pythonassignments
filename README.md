@@ -1,2 +1,0 @@
-# Pythonassignments
-Assignments in python
