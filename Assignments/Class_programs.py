@@ -38,11 +38,12 @@ class Convert:
         return int_val
 
 
-#print(Convert().int_roman(755))
-#print(Convert().roman_int('CM'))
+print(Convert().int_roman(755))
+print(Convert().roman_int('CM'))
 
 # 2.  Write a Python class to find validity of a string of parentheses, '(', ')', '{', '}', '[' and '].
 # These brackets must be close in the correct order, for example "()" and "()[]{}" are valid but "[)", "({[)]" and "{{{" are invalid.
+
 
 class ValidParanthesis:
 
@@ -57,8 +58,8 @@ class ValidParanthesis:
         return len(stack) == 0
 
 
-#print(ValidParanthesis().is_valid_paranthesis('()'))
-#print(ValidParanthesis().is_valid_paranthesis('({['))
+print(ValidParanthesis().is_valid_paranthesis('()'))
+print(ValidParanthesis().is_valid_paranthesis('({['))
 
 
 # 3.Write a Python class to get all possible unique subsets from a set of distinct integers
@@ -73,13 +74,14 @@ class Subsets:
         return [current]
 
 
-#print(Subsets().sub_sets([1, 4, 8]))
+print(Subsets().sub_sets([1, 4, 8]))
 
 
 # 4.  Write a Python class to find a pair of elements (indices of the two numbers)
 # from a given array whose sum equals a specific target number.
 
 class Target:
+
     def pair_elements(self, numbers, target):
         lookup = {}
         for i, num in enumerate(numbers):
@@ -87,7 +89,8 @@ class Target:
                 return (lookup[target - num], i)
             lookup[num] = i
 
-#print(Target().pair_elements((1,2,3,4,5), 5))
+
+print(Target().pair_elements((1,2,3,4,5), 5))
 
 
 # 5.Write a Python class to find the three elements that sum to zero from a set of n real numbers.
@@ -115,7 +118,7 @@ class Realnumbers:
         return result
 
 
-#print(Realnumbers().zerosum([-2, -3, -7, 5, 10, -25, 2, 8]))
+print(Realnumbers().zerosum([-2, -3, -7, 5, 10, -25, 2, 8]))
 
 
 # 6.Write a Python class to implement pow(x, n)
@@ -138,9 +141,10 @@ class Powers:
             return val * val
         return val * val * x
 
-#print(Powers().pow(2, 2))
-#print(Powers().pow(2,-1))
-#print(Powers().pow(5,-3))
+
+print(Powers().pow(2, 2))
+print(Powers().pow(2,-1))
+print(Powers().pow(5,-3))
 
 
 # 7.  Write a Python class to reverse a string word by word.
@@ -153,15 +157,15 @@ class Reverse:
         return result
 
 
-#print(Reverse().reverse_str('hello .py'))
-#print(Reverse().reverse_str('python programming is awesome'))
+print(Reverse().reverse_str('hello .py'))
+print(Reverse().reverse_str('python programming is awesome'))
 
 
 # 8. Write a python class which has 2 methods get_string and print_string. get_string takes a string from the user
 # and print_string prints the string in reverse order
 
 class StringIO:
-    def __int__(self):
+    def __init__(self):
         self.str1 = ''
 
     def get_string(self):
@@ -173,29 +177,30 @@ class StringIO:
         print(' '.join(reversed(s)))
 
 
-'''
 str1 = StringIO()
-str2= str1.get_string()
+str2 = str1.get_string()
 str1.print_string(str2)
-'''
+
 
 # 9. Write a Python class named Circle constructed by a radius
 # and two methods which will compute the area and the perimeter of a circle.
 
 
 class Circle:
-    def __int__(self, r):
+    def __init__(self, r):
         self.r = r
+
     def area(self):
         return self.r**2*3.14
+
     def perimeter(self):
         return self.r*2*3.14
 
-'''
-NewCircle = Circle(4)
-print(NewCircle.area())
-print(NewCircle.perimeter())
-'''
+
+c = Circle(4)
+print(c.area())
+print(c.perimeter())
+
 
 # 10. Write a Python program to get the class name of an instance in Python.
 
